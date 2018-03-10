@@ -8,7 +8,7 @@ public class CollectItemController : MonoBehaviour {
     {
         if (collider.gameObject.tag == "Player")
         {
-            Debug.Log("Item eingesammelt");
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().addWood();
             Destroy(gameObject);
         }
     }

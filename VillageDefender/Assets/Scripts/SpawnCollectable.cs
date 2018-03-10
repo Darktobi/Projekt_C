@@ -36,8 +36,8 @@ public class SpawnCollectable : MonoBehaviour {
         
         System.Random rnd = new System.Random();
         int numberOfItems = rnd.Next(maxNumberOfItems + 1);
-        int xPosition = (int)GetComponent<Transform>().position.x;
-        int yPosition = (int)GetComponent<Transform>().position.y;
+        int xPosition = (int)transform.position.x;
+        int yPosition = (int)transform.position.y;
 
         for(int i = 0; i<=numberOfItems; i++)
         {

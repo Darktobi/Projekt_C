@@ -146,7 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adaffddc0ce3a87459718c22cca14cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 1247407199158294, guid: 7b65bbe894ea39d45b92afc4fe61aaef, type: 2}
+  spawnableItem: {fileID: 1247407199158294, guid: 7b65bbe894ea39d45b92afc4fe61aaef,
+    type: 2}
   interval: 2
   life: 3
   maxNumberOfItems: 5
