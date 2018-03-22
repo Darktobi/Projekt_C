@@ -7,9 +7,11 @@ public class Player : MonoBehaviour {
     private int life = 100;
     private int collectedWood = 0;
 
+    private Inventory inventory;
+
 	// Use this for initialization
 	void Start () {
-		
+        inventory = GetComponent<Inventory>();
 	}
 	
 	// Update is called once per frame
@@ -37,6 +39,12 @@ public class Player : MonoBehaviour {
     public int getCurrentLife()
     {
         return life;
+    }
+
+    public void addItem(Item item)
+    {
+        inventory.addItem(item);
+        inventory.showItem();
     }
 
     public void addWood()
