@@ -9,6 +9,8 @@ public class CollectItemController : MonoBehaviour {
         if (collider.gameObject.tag == "Player")
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().addWood();
+            GameObject item = Resources.Load("Prefabs/Holz") as GameObject;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().addItem(item.GetComponent<Item>());
             Destroy(gameObject);
         }
     }

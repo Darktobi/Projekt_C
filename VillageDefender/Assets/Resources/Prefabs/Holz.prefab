@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 58658901724621504}
   - component: {fileID: 114821527293306270}
   - component: {fileID: 212771551220036790}
+  - component: {fileID: 114790533121107028}
   m_Layer: 0
   m_Name: Holz
   m_TagString: Untagged
@@ -57,6 +58,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114790533121107028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1247407199158294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9190fb3fa91ec954a90565858ae7d394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Holz
 --- !u!114 &114821527293306270
 MonoBehaviour:
   m_ObjectHideFlags: 1
