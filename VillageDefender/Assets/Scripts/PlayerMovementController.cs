@@ -6,6 +6,10 @@ public class PlayerMovementController : MonoBehaviour {
 
     public float speed = 10;
 
+    private enum Direction { Up, Down, Left, Right };
+
+    private Direction currentDirection;
+
     Rigidbody2D rbody;
     Animator anim;
 
@@ -14,8 +18,7 @@ public class PlayerMovementController : MonoBehaviour {
 
         rbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-
-
+        currentDirection = Direction.Up;
     }
 
     private void FixedUpdate()
@@ -25,7 +28,10 @@ public class PlayerMovementController : MonoBehaviour {
         float v = Input.GetAxisRaw("Vertical");
 
         Vector2 dir = new Vector2(h, v);
-     
+
+        setCurrentDirection(true, v);
+        setCurrentDirection(false, h);
+
         if (dir != Vector2.zero)
         {
 
@@ -42,5 +48,56 @@ public class PlayerMovementController : MonoBehaviour {
 
         rbody.velocity = dir.normalized * speed;
 
+        if (Input.GetKeyUp(KeyCode.V))
+        {
+            Vector3 spawnPos = transform.position + transform.forward;
+            if (currentDirection == Direction.Right)
+            {
+                spawnPos += Vector3.right;
+            }
+            else if(currentDirection == Direction.Left)
+            {
+                spawnPos += Vector3.left;
+            }
+            else if(currentDirection == Direction.Up)
+            {
+                spawnPos += Vector3.up;
+            }
+            else if(currentDirection == Direction.Down)
+            {
+                spawnPos += Vector3.down;  
+            }
+            
+           GameObject g = (GameObject)Instantiate(GetComponent<Player>().equippedWeapon, spawnPos, transform.rotation);
+        }
+
+    }
+
+    private void setCurrentDirection(bool vertical, float value)
+    {
+        if (vertical)
+        {
+            if(value == 1)
+            {
+                currentDirection = Direction.Up;
+            }
+            else if(value == -1)
+            {
+                currentDirection = Direction.Down;
+            }
+
+        }
+
+        else
+        {
+            if(value == 1)
+            {
+                currentDirection = Direction.Right;
+            }
+            else if (value == -1)
+            {
+                currentDirection = Direction.Left;
+            }
+        }
     }
 }

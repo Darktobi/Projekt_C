@@ -9,6 +9,8 @@ public class Player : MonoBehaviour {
 
     private Inventory inventory;
 
+    public GameObject equippedWeapon;
+
 	// Use this for initialization
 	void Start () {
         inventory = GetComponent<Inventory>();
@@ -33,7 +35,6 @@ public class Player : MonoBehaviour {
         GetComponent<Rigidbody2D>().AddForce(-force * magnitude);
 
         this.life -= life;
-
     }
 
     public int getCurrentLife()
