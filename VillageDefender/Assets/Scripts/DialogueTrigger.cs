@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour {
 
+	// public bool hasEnterd  = false;
+
 	public Dialogue dialogue;
 
 	/*
@@ -15,6 +17,14 @@ public class DialogueTrigger : MonoBehaviour {
 	}
 */
 
+
+
+
+
+
+
+
+
 	void OnTriggerEnter2D(Collider2D other) 
 	{ 
 		if (other.tag == "Player")
@@ -23,6 +33,14 @@ public class DialogueTrigger : MonoBehaviour {
 		}
 	}
 
+
+	void OnTriggerExit2D(Collider2D other2)
+	{
+		
+		//Debug.Log ("Bin raus");
+
+		FindObjectOfType<DialogueManager>().EndDialogue(); 
+	}
 
 
 }
