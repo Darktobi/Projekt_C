@@ -42,7 +42,6 @@ public class PlayerMovementController : MonoBehaviour {
         }
         else
         {
-
             anim.SetBool("is walking", false);
         }
 
