@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour {
 
+    public int str = 0;
+
+    Animator anim;
+
 	// Use this for initialization
 	void Start () {
-		
+        anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        Destroy(gameObject, 0.3f);
+       Destroy(gameObject, 0.3f);
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
