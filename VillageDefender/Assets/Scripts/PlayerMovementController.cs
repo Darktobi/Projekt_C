@@ -9,9 +9,12 @@ public class PlayerMovementController : MonoBehaviour {
     private enum Direction { Up, Down, Left, Right };
 
     private Direction currentDirection;
+	private static bool playerExists;
 
     Rigidbody2D rbody;
     Animator anim;
+
+	public string startPoint;
 
     void Start()
     {
@@ -19,6 +22,15 @@ public class PlayerMovementController : MonoBehaviour {
         rbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         currentDirection = Direction.Up;
+
+		// Szenenwechsel
+		if (!playerExists) {
+			playerExists = true;
+			DontDestroyOnLoad (transform.gameObject);
+		} else {
+			Destroy (gameObject);
+		}
+
     }
 
     private void FixedUpdate()

@@ -11,3 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prototype.unity
     guid: 8257542e864d56d4a99e04a30abdfc03
+  - enabled: 1
+    path: Assets/Scenes/Dorf2.unity
+    guid: 891009de23abe4d4a933c65a90825f1a
+  - enabled: 1
+    path: Assets/Scenes/SchwertInsel.unity
+    guid: 9f69b3e0502e50f489fffe1cbdc6735b
