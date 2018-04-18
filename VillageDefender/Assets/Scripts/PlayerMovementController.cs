@@ -11,6 +11,9 @@ public class PlayerMovementController : MonoBehaviour {
     private Direction currentDirection;
 	private static bool playerExists;
 
+    private int attackDirection = 1;
+
+
     Rigidbody2D rbody;
     Animator anim;
 
@@ -18,9 +21,9 @@ public class PlayerMovementController : MonoBehaviour {
 
     void Start()
     {
-
         rbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
         currentDirection = Direction.Up;
 
 		// Szenenwechsel
@@ -62,24 +65,25 @@ public class PlayerMovementController : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.V))
         {
             Vector3 spawnPos = transform.position + transform.forward;
-            if (currentDirection == Direction.Right)
-            {
-                spawnPos += Vector3.right;
-            }
-            else if(currentDirection == Direction.Left)
-            {
-                spawnPos += Vector3.left;
-            }
-            else if(currentDirection == Direction.Up)
+            if (attackDirection == 1)
             {
                 spawnPos += Vector3.up;
             }
-            else if(currentDirection == Direction.Down)
+            else if (attackDirection == 2)
             {
-                spawnPos += Vector3.down;  
+                spawnPos += Vector3.right;
             }
-            
-           GameObject g = (GameObject)Instantiate(GetComponent<Player>().equippedWeapon, spawnPos, transform.rotation);
+            else if (attackDirection == 3)
+            {
+                spawnPos += Vector3.down;
+            }
+            else if(attackDirection == 4)
+            {
+                spawnPos += Vector3.left;
+            }
+
+            GetComponent<Player>().equippedWeapon.direction = attackDirection;
+            Instantiate(GetComponent<Player>().equippedWeapon, spawnPos, transform.rotation);
         }
 
     }
@@ -90,11 +94,11 @@ public class PlayerMovementController : MonoBehaviour {
         {
             if(value == 1)
             {
-                currentDirection = Direction.Up;
+                attackDirection = 1;
             }
             else if(value == -1)
             {
-                currentDirection = Direction.Down;
+                attackDirection = 3;
             }
 
         }
@@ -103,11 +107,11 @@ public class PlayerMovementController : MonoBehaviour {
         {
             if(value == 1)
             {
-                currentDirection = Direction.Right;
+                attackDirection = 2;
             }
             else if (value == -1)
             {
-                currentDirection = Direction.Left;
+                attackDirection = 4;
             }
         }
     }
