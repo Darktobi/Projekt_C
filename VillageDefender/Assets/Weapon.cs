@@ -6,17 +6,20 @@ public class Weapon : MonoBehaviour {
 
     public int str = 0;
 
+    public int direction = 1;
+
     Animator anim;
 
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
-	}
+        anim.SetInteger("attackDirection", direction);
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
-       Destroy(gameObject, 0.3f);
+        Destroy(gameObject, 0.3f);
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)

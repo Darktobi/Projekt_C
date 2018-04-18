@@ -9,7 +9,7 @@ public class Player : MonoBehaviour {
 
     private Inventory inventory;
 
-    public GameObject equippedWeapon;
+    public Weapon equippedWeapon;
 
 	// Use this for initialization
 	void Start () {

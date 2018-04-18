@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 72666cd7255c7004095da6541c86699c
-timeCreated: 1523445567
+guid: 70eca4f2aee61bd469588c8067f50304
+timeCreated: 1524041927
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -19,6 +19,15 @@ TextureImporter:
     21300024: Schwert_12
     21300026: Schwert_13
     21300028: Schwert_14
+    21300030: Schwert_15
+    21300032: Schwert_16
+    21300034: Schwert_17
+    21300036: Schwert_18
+    21300038: Schwert_19
+    21300040: Schwert_20
+    21300042: Schwert_21
+    21300044: Schwert_22
+    21300046: Schwert_23
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -108,10 +117,10 @@ TextureImporter:
       name: Schwert_0
       rect:
         serializedVersion: 2
-        x: 68
-        y: 1146
-        width: 204
-        height: 314
+        x: 52
+        y: 1143
+        width: 206
+        height: 315
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,10 +131,10 @@ TextureImporter:
       name: Schwert_1
       rect:
         serializedVersion: 2
-        x: 375
-        y: 1122
-        width: 142
-        height: 340
+        x: 358
+        y: 1119
+        width: 145
+        height: 342
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,10 +145,10 @@ TextureImporter:
       name: Schwert_2
       rect:
         serializedVersion: 2
-        x: 674
-        y: 1121
-        width: 113
-        height: 343
+        x: 658
+        y: 1118
+        width: 115
+        height: 345
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,10 +159,10 @@ TextureImporter:
       name: Schwert_3
       rect:
         serializedVersion: 2
-        x: 932
-        y: 1122
-        width: 112
-        height: 343
+        x: 915
+        y: 1119
+        width: 115
+        height: 344
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,10 +173,10 @@ TextureImporter:
       name: Schwert_4
       rect:
         serializedVersion: 2
-        x: 1205
-        y: 1119
-        width: 140
-        height: 340
+        x: 1188
+        y: 1116
+        width: 142
+        height: 342
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,10 +187,10 @@ TextureImporter:
       name: Schwert_5
       rect:
         serializedVersion: 2
-        x: 1474
-        y: 1144
-        width: 201
-        height: 315
+        x: 1458
+        y: 1142
+        width: 203
+        height: 316
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,10 +201,10 @@ TextureImporter:
       name: Schwert_6
       rect:
         serializedVersion: 2
-        x: 38
-        y: 917
-        width: 343
-        height: 112
+        x: 0
+        y: 890
+        width: 315
+        height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,10 +215,10 @@ TextureImporter:
       name: Schwert_7
       rect:
         serializedVersion: 2
-        x: 520
-        y: 918
-        width: 343
-        height: 112
+        x: 381
+        y: 914
+        width: 342
+        height: 145
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,10 +229,10 @@ TextureImporter:
       name: Schwert_8
       rect:
         serializedVersion: 2
-        x: 926
-        y: 918
-        width: 343
-        height: 112
+        x: 807
+        y: 916
+        width: 345
+        height: 115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,10 +243,10 @@ TextureImporter:
       name: Schwert_9
       rect:
         serializedVersion: 2
-        x: 33
-        y: 558
-        width: 343
-        height: 113
+        x: 1213
+        y: 916
+        width: 345
+        height: 115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,10 +257,10 @@ TextureImporter:
       name: Schwert_10
       rect:
         serializedVersion: 2
-        x: 506
-        y: 567
-        width: 344
-        height: 113
+        x: 1623
+        y: 914
+        width: 342
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,10 +271,10 @@ TextureImporter:
       name: Schwert_11
       rect:
         serializedVersion: 2
-        x: 919
-        y: 567
-        width: 343
-        height: 113
+        x: 1967
+        y: 914
+        width: 315
+        height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,10 +285,10 @@ TextureImporter:
       name: Schwert_12
       rect:
         serializedVersion: 2
-        x: 71
-        y: 20
-        width: 112
-        height: 343
+        x: 30
+        y: 505
+        width: 317
+        height: 202
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -290,10 +299,10 @@ TextureImporter:
       name: Schwert_13
       rect:
         serializedVersion: 2
-        x: 560
-        y: 18
-        width: 113
-        height: 343
+        x: 394
+        y: 548
+        width: 342
+        height: 141
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,10 +313,136 @@ TextureImporter:
       name: Schwert_14
       rect:
         serializedVersion: 2
-        x: 1048
-        y: 18
-        width: 112
-        height: 343
+        x: 773
+        y: 564
+        width: 345
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Schwert_15
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 563
+        width: 346
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Schwert_16
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 539
+        width: 341
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Schwert_17
+      rect:
+        serializedVersion: 2
+        x: 1943
+        y: 499
+        width: 315
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Schwert_18
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 37
+        width: 204
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Schwert_19
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 17
+        width: 143
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Schwert_20
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 0
+        width: 115
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Schwert_21
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 0
+        width: 115
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Schwert_22
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 13
+        width: 144
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Schwert_23
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 43
+        width: 204
+        height: 316
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
