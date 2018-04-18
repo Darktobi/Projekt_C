@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="Tanne.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient841">
+      <stop
+         style="stop-color:#3e3b12;stop-opacity:1;"
+         offset="0"
+         id="stop837" />
+      <stop
+         style="stop-color:#3e3b12;stop-opacity:0;"
+         offset="1"
+         id="stop839" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient821">
+      <stop
+         style="stop-color:#006200;stop-opacity:1"
+         offset="0"
+         id="stop817" />
+      <stop
+         style="stop-color:#007200;stop-opacity:0;"
+         offset="1"
+         id="stop819" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient821"
+       id="linearGradient825"
+       x1="74.839287"
+       y1="172.64583"
+       x2="149.48958"
+       y2="142.02975"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient841"
+       id="linearGradient845"
+       x1="70.681541"
+       y1="224.52306"
+       x2="202.59525"
+       y2="100.35789"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="117.38619"
+     inkscape:cy="484.89531"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1178"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#000000;fill-opacity:0.33488375;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 20.977679,225.37351 c 20.027258,10.54144 76.810873,10.33953 82.965771,-0.75596 -22.514419,-13.47641 -23.125475,-5.7014 -37.041666,-10.58332 -17.564101,4.11819 -32.151154,4.6114 -45.924105,11.33928 z"
+       id="path826"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="C:\Users\Chuchu_chan\Documents\GitHub\Projekt_C\VillageDefender\Assets\Isa_Pngs\Tanne_schatten_128.png"
+       inkscape:export-xdpi="29"
+       inkscape:export-ydpi="29" />
+    <path
+       style="fill:url(#linearGradient845);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 52.538688,218.00297 c 1.306832,7.9667 -0.620567,7.48019 -3.401785,10.58333 h 31.372023 c -4.052673,-4.0908 -7.076603,-13.88875 -5.291666,-14.93005 z"
+       id="path835"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-xdpi="29"
+       inkscape:export-ydpi="29"
+       inkscape:export-filename="C:\Users\Chuchu_chan\Documents\GitHub\Projekt_C\VillageDefender\Assets\Isa_Pngs\Tanne_schatten_128.png" />
+    <path
+       style="fill:url(#linearGradient825);fill-opacity:1;fill-rule:evenodd;stroke:#008500;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 66.901784,112.35863 c -7.360447,10.49991 -10.258441,17.53421 -22.111607,21.54464 l 7.370538,4.15773 v 0 c -2.903631,8.53494 -13.837271,11.91625 -21.166668,17.00893 l 13.796131,8.88245 c -6.981927,16.93587 -18.918334,17.59273 -29.104166,24.00149 l 24.001488,7.74851 c -6.965209,8.30995 -18.275726,10.82615 -27.970239,15.49703 13.631925,7.36513 28.765632,10.01951 40.821428,6.80356 h 9.260417 13.607144 c 14.125258,6.05253 25.95956,1.10849 37.60863,-4.7247 -6.70631,-4.93031 -13.870346,-7.11423 -19.654762,-17.57589 l 20.599702,-4.15774 c -9.70139,-6.74936 -19.402778,-12.27955 -29.104166,-26.26935 l 16.819936,-9.07142 c -7.72458,-3.88744 -15.905088,-5.43974 -22.678568,-13.60715 v 0 l 10.394346,-6.04762 c -7.056606,-0.80477 -14.428327,-6.80896 -22.489584,-24.19047 z"
+       id="path815"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccccccccccc"
+       inkscape:export-xdpi="29.881653"
+       inkscape:export-ydpi="29.881653"
+       inkscape:export-filename="C:\Users\Chuchu_chan\Documents\GitHub\Projekt_C\VillageDefender\Assets\Isa_Pngs\Tanne_schatten_128.png" />
+    <path
+       style="fill:#007100;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 51.40476,133.71428 c 5.194402,-3.02091 8.285557,-6.83054 11.528274,-10.58333 -1.933634,4.57616 -2.801257,8.67854 -6.80357,14.17411 0.398359,-0.82694 -1.091684,-2.00796 -4.724704,-3.59078 z"
+       id="path827"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-xdpi="29"
+       inkscape:export-ydpi="29"
+       inkscape:export-filename="C:\Users\Chuchu_chan\Documents\GitHub\Projekt_C\VillageDefender\Assets\Isa_Pngs\Tanne_schatten_128.png" />
+    <path
+       style="fill:#007100;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 36.852677,155.44791 c 6.123292,-3.62744 10.24224,-6.89045 13.607145,-10.01636 -2.131992,4.54503 -4.236687,9.09999 -9.07143,12.6622 -0.704272,-0.57132 -0.715734,-0.87617 -4.535715,-2.64584 z"
+       id="path829"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-xdpi="29"
+       inkscape:export-ydpi="29"
+       inkscape:export-filename="C:\Users\Chuchu_chan\Documents\GitHub\Projekt_C\VillageDefender\Assets\Isa_Pngs\Tanne_schatten_128.png" />
+    <path
+       style="fill:#007100;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 27.403274,187.00893 c 6.516316,-4.25277 11.473899,-8.72822 16.252975,-13.22917 -3.970333,7.05024 -8.776659,17.94605 -10.394344,14.17411 0.341358,-0.68272 -2.421664,-1.2043 -4.346728,-0.56697 -1.44646,0.47888 -1.511903,-0.37797 -1.511903,-0.37797 z"
+       id="path831"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccsc"
+       inkscape:export-xdpi="29"
+       inkscape:export-ydpi="29"
+       inkscape:export-filename="C:\Users\Chuchu_chan\Documents\GitHub\Projekt_C\VillageDefender\Assets\Isa_Pngs\Tanne_schatten_128.png" />
+    <path
+       style="fill:#007100;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 25.891369,208.74256 7.753835,-3.84263 9.255094,-5.79577 c -4.381272,4.69275 -8.276933,9.91525 -15.308038,11.71727 0.456887,-1.54617 -0.698537,-1.74874 -1.700891,-2.07887 z"
+       id="path833"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-xdpi="29"
+       inkscape:export-ydpi="29"
+       inkscape:export-filename="C:\Users\Chuchu_chan\Documents\GitHub\Projekt_C\VillageDefender\Assets\Isa_Pngs\Tanne_schatten_128.png" />
+  </g>
+</svg>
