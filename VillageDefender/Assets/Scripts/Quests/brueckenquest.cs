@@ -7,6 +7,7 @@ public class brueckenquest : MonoBehaviour {
 	private int holzanzahl = 0;
 
 	private GameObject bruecke;
+	private GameObject waechter;
 
 
 	void OnTriggerEnter2D(Collider2D other)
@@ -23,12 +24,15 @@ public class brueckenquest : MonoBehaviour {
 
 		if (holzanzahl >= 5) {
 
+			DialogueManager.questprogress = 1;	
 			// Holzbrücke anzeigen
 			bruecke = GameObject.Find ("Holzbruecke");
 			bruecke.GetComponent<Renderer>().enabled = true;
+			waechter = GameObject.Find ("Brueckenwaechter");
+			Destroy (waechter);
 
-					
-			Destroy (gameObject);
+				
+			//Destroy (gameObject);
 
 
 

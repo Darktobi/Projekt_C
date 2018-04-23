@@ -6,6 +6,7 @@ public class Player : MonoBehaviour {
 
     private int life = 100;
     private int collectedWood = 0;
+	private int collectedSword = 0;
 
     private Inventory inventory;
 
@@ -54,8 +55,19 @@ public class Player : MonoBehaviour {
        
     }
 
+	public void addSword()
+	{
+		collectedSword++;
+
+	}
+
     public int getCollectedWood()
     {
         return collectedWood;
     }
+
+	public int getCollectedSword()
+	{
+		return collectedSword;
+	}
 }
