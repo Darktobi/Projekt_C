@@ -6,6 +6,7 @@ public class BossTrigger : MonoBehaviour {
 	
 	public GameObject endgegner;
 	public GameObject bariere;
+	public GameObject displayGameOver;
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
@@ -18,6 +19,13 @@ public class BossTrigger : MonoBehaviour {
 
 				bariere.SetActive (true);
 			}
+		} 
+
+		if(endgegner == null) 
+		{
+			Debug.Log ("GEwonnen");
+			displayGameOver.SetActive (true);
+
 		}
 
 
