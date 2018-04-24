@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+	public int questfortschritt = 0;
     private int life = 100;
     private int collectedWood = 0;
 	private int collectedSword = 0;
@@ -70,4 +71,17 @@ public class Player : MonoBehaviour {
 	{
 		return collectedSword;
 	}
+
+	public void addQuest (int questzahl)
+	{
+		questfortschritt = questzahl;
+
+	}
+
+	public int getQuest()
+	{
+		return questfortschritt;
+	}
+
+
 }

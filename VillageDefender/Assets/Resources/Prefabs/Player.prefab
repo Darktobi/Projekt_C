@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db5f36d789d04224abc6f82a04d63895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questfortschritt: 0
   equippedWeapon: {fileID: 114372463410251522, guid: de8c366da86004841b434b1bda1b5ea3,
     type: 2}
 --- !u!114 &114664724123606354
@@ -133,6 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  startPoint: 
 --- !u!114 &114745770004995578
 MonoBehaviour:
   m_ObjectHideFlags: 1

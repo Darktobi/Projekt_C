@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIHandler : MonoBehaviour {
 
     public Text playerLife;
-    public Text collectedWood;
+ //   public Text collectedWood;
     private Player player;
 
 	// Use this for initialization
@@ -17,6 +17,6 @@ public class UIHandler : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         playerLife.text = player.getCurrentLife().ToString();
-        collectedWood.text = player.getCollectedWood().ToString();
+//        collectedWood.text = player.getCollectedWood().ToString();
 	}
 }

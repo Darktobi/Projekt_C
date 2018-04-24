@@ -56,9 +56,12 @@ public class UIInventory : MonoBehaviour {
 
 			//addinventar ();
 			slots[1].AddItem ();
+			player.addQuest (1);
+
+			// Debug.Log ("Hallo hab Holz");
 
 			//slots [1].AddItem ();
-			// Debug.Log ("Hallo hab Holz");
+
 		}
 
 

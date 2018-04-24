@@ -14,7 +14,8 @@ public class MainMenu : MonoBehaviour {
 		
 	}
 	public void StartGame(){
-		SceneManager.LoadScene("Prototype");
+		SceneManager.LoadScene("Dorf2");
+		//Prototyp
 	}
 	
 	public void Quit(){
