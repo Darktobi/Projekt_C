@@ -23,8 +23,18 @@ public class KiAnimation : MonoBehaviour {
 		Vector2 v2 = (target.transform.position - transform.position).normalized;
 		GetComponent<Rigidbody2D>().velocity = v2 * speed;
 
+
+		//Befehle für den Animator 
+		//Richtung
 		anim.SetFloat("input_x", v2.x);
 		anim.SetFloat("input_y", v2.y);
+
+		//animator geht oder läuft
+		if (v2 != Vector2.zero) {
+			anim.SetBool ("is walking", true);
+		} else {
+			anim.SetBool ("is walking", false);
+		}
 
 	}
 }
