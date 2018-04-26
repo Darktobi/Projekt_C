@@ -175,6 +175,26 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ae75260a5c54fb408adb8e232cf1590, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &102765913 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1119796220726988, guid: 4004c3178dcbf534fbc7d1ca36cf5e1f,
+    type: 2}
+  m_PrefabInternal: {fileID: 460490764}
+--- !u!58 &102765914
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 102765913}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.5935565, y: -0.64752257}
+  serializedVersion: 2
+  m_Radius: 7.370787
 --- !u!1 &122736161
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,11 +401,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4893376596293190, guid: 4004c3178dcbf534fbc7d1ca36cf5e1f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.91
+      value: -2.49
       objectReference: {fileID: 0}
     - target: {fileID: 4893376596293190, guid: 4004c3178dcbf534fbc7d1ca36cf5e1f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.203
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 4893376596293190, guid: 4004c3178dcbf534fbc7d1ca36cf5e1f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -410,6 +430,11 @@ Prefab:
     - target: {fileID: 4893376596293190, guid: 4004c3178dcbf534fbc7d1ca36cf5e1f, type: 2}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114608536052528816, guid: 4004c3178dcbf534fbc7d1ca36cf5e1f,
+        type: 2}
+      propertyPath: chaseRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4004c3178dcbf534fbc7d1ca36cf5e1f, type: 2}
@@ -1016,11 +1041,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4172120912030628, guid: 705e65281ba4b724e8add5d32a2815df, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -8.01
+      value: -7.69
       objectReference: {fileID: 0}
     - target: {fileID: 4172120912030628, guid: 705e65281ba4b724e8add5d32a2815df, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.98
+      value: 1.01
       objectReference: {fileID: 0}
     - target: {fileID: 4172120912030628, guid: 705e65281ba4b724e8add5d32a2815df, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2027,7 +2052,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLife: {fileID: 336245015}
-  collectedWood: {fileID: 1949623795}
 --- !u!4 &2059387497 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4686410552934962, guid: 0ae75260a5c54fb408adb8e232cf1590,
