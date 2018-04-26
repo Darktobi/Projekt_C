@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class UIInventory : MonoBehaviour {
 
+
+	public Transform itemsParent;
+	InventorySlot[] slots;
+
 	private Player player;
 
 	public Image icon;
@@ -33,6 +37,9 @@ public class UIInventory : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
+		slots = itemsParent.GetComponentsInChildren<InventorySlot> ();
+
 	}
 
 
@@ -45,6 +52,25 @@ public class UIInventory : MonoBehaviour {
 			// Debug.Log ("Hallo hab Holz");
 		}
 
+		if (player.getCollectedSword () > 0) {
+
+			//addinventar ();
+			slots[1].AddItem ();
+			player.addQuest (1);
+
+			// Debug.Log ("Hallo hab Holz");
+
+			//slots [1].AddItem ();
+
+		}
+
+
+		/*
+		for (int i = 0; i < slots.Length; i++) {
+			slots [1].AddItem ();
+
+		}
+		*/
 
 
 	}

@@ -29,8 +29,10 @@ public class PauseMenu : MonoBehaviour {
     }
 	public void GoOnFunktions()
 	{
-		Cursor.lockState = CursorLockMode.Locked; 
-        Cursor.visible = false;
+	//	Cursor.lockState = CursorLockMode.Locked;
+
+		//Cursor an aus
+      //  Cursor.visible = true;
         canvasPause.gameObject.SetActive(false);
         Time.timeScale = 1;
 	}

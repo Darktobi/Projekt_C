@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+	public int questfortschritt = 0;
     private int life = 100;
     private int collectedWood = 0;
+	private int collectedSword = 0;
 
     private Inventory inventory;
 
@@ -54,8 +56,32 @@ public class Player : MonoBehaviour {
        
     }
 
+	public void addSword()
+	{
+		collectedSword++;
+
+	}
+
     public int getCollectedWood()
     {
         return collectedWood;
     }
+
+	public int getCollectedSword()
+	{
+		return collectedSword;
+	}
+
+	public void addQuest (int questzahl)
+	{
+		questfortschritt = questzahl;
+
+	}
+
+	public int getQuest()
+	{
+		return questfortschritt;
+	}
+
+
 }
