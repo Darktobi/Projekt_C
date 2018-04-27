@@ -10,6 +10,13 @@ public class SpawnCollectable : MonoBehaviour {
     public int life = 3;
     public int maxNumberOfItems = 5;
 
+	 public AudioSource audioController;
+
+	public AudioClip chopwood;
+
+
+	
+
 
     private void FixedUpdate()
     {
@@ -26,7 +33,17 @@ public class SpawnCollectable : MonoBehaviour {
         {
             if (Input.GetKeyUp(KeyCode.Space))
             {
-                life--;
+				
+			
+				//wenn der ton nicht gespielt wird
+				if (!audioController.isPlaying) {
+
+					audioController.PlayOneShot (chopwood);
+				
+					life--;
+
+
+				}
             }
         }
     }

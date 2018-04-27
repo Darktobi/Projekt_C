@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
 	public int questfortschritt = 0;
-    private int life = 100;
+    public int life = 100;
     private int collectedWood = 0;
 	private int collectedSword = 0;
 
@@ -13,12 +13,17 @@ public class Player : MonoBehaviour {
 
     public Weapon equippedWeapon;
 
+	public AudioSource audioController;
+
+	public AudioClip takeDamageSound;
+
 	// Use this for initialization
 	void Start () {
         inventory = GetComponent<Inventory>();
 	}
 	
 	// Update is called once per frame
+	/*
 	void Update () {
 		
         if(life <= 0)
@@ -30,6 +35,7 @@ public class Player : MonoBehaviour {
             #endif
         }
     }
+	*/
 
     public void takeDamage(int life, Vector2 force, int magnitude)
     {
@@ -37,6 +43,7 @@ public class Player : MonoBehaviour {
         GetComponent<Rigidbody2D>().AddForce(-force * magnitude);
 
         this.life -= life;
+		audioController.PlayOneShot (takeDamageSound);
     }
 
     public int getCurrentLife()

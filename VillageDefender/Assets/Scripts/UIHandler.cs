@@ -9,6 +9,8 @@ public class UIHandler : MonoBehaviour {
  //   public Text collectedWood;
     private Player player;
 
+	public GameObject displayGameOverDead;
+
 	// Use this for initialization
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
@@ -17,6 +19,12 @@ public class UIHandler : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         playerLife.text = player.getCurrentLife().ToString();
+
+		if (player.getCurrentLife () <= 0) {
+			Debug.Log ("Game Over");
+			Time.timeScale = 0;
+			displayGameOverDead.SetActive (true);
+		}
 //        collectedWood.text = player.getCollectedWood().ToString();
 	}
 }
