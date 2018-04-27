@@ -9,13 +9,16 @@ public class EnemyChaseMovementController : MonoBehaviour {
 
     private bool isChasing;
 
+    Vector2 dir;
+
     GameObject target;
-    Animator anim;
+    EnemyAnimation enemyAnimation;
 
     // Use this for initialization
     void Start () {
-        anim = GetComponent<Animator>();
         target = GameObject.FindWithTag("Player");
+        enemyAnimation = GetComponent<EnemyAnimation>();
+        dir = new Vector2();
     }
 	
 	// Update is called once per frame
@@ -32,13 +35,13 @@ public class EnemyChaseMovementController : MonoBehaviour {
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         }
 
+        enemyAnimation.animate(dir, isChasing);
 	}
 
     private void move()
     {
-        Vector2 v2 = (target.transform.position - transform.position).normalized;
-        changeAnimation(v2);
-        GetComponent<Rigidbody2D>().velocity = v2 * speed;
+        dir = (target.transform.position - transform.position).normalized;
+        GetComponent<Rigidbody2D>().velocity = dir * speed;
     }
 
     private bool targetInRange()
@@ -62,47 +65,5 @@ public class EnemyChaseMovementController : MonoBehaviour {
         {
             isChasing = true;
         }
-    }
-
-    void changeAnimation(Vector2 v)
-    {
-        if(v.y > 0)
-        {
-            if(v.y < 0.3f)
-            {
-                if(v.x > 0)
-                {
-                    anim.SetInteger("direction", 2);
-                }
-                else if (v.x < 0)
-                {
-                    anim.SetInteger("direction", 4);
-                }
-            }
-            else
-            {
-                anim.SetInteger("direction", 1);
-            }  
-        }
-        else if(v.y < 0)
-        {
-            if (v.y > -0.3f)
-            {
-                if (v.x > 0)
-                {
-                    anim.SetInteger("direction", 2);
-                }
-                else if (v.x < 0)
-                {
-                    anim.SetInteger("direction", 4);
-                }
-            }
-            else
-            {
-                anim.SetInteger("direction", 3);
-            }
-        }
-    }
-
-
+    } 
 }

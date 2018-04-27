@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 212864305356734992}
   - component: {fileID: 95774173090958932}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  chaseRange: 5
 --- !u!114 &114694703705956046
 MonoBehaviour:
   m_ObjectHideFlags: 1
