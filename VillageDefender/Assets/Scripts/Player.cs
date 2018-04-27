@@ -20,8 +20,19 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         inventory = GetComponent<Inventory>();
+				}
+
+
+
+	// Bei Szenenwechsel muss die Verknüpfung zum Audiocontroller wiederhergestellt werden.
+	void Update(){
+		
+		audioController = GameObject.Find ("AudioController").GetComponent<AudioSource>();
+
 	}
-	
+
+
+
 	// Update is called once per frame
 	/*
 	void Update () {
@@ -50,6 +61,13 @@ public class Player : MonoBehaviour {
     {
         return life;
     }
+
+	public void addLife()
+	{
+		if (this.life < 100) {
+			life++;
+		}
+	}
 
     public void addItem(Item item)
     {

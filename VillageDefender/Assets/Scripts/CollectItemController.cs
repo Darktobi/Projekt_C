@@ -18,7 +18,7 @@ public class CollectItemController : MonoBehaviour {
 			//  3  Debug.Log (item2.getItemName ());
 
 
-			    Debug.Log (GetComponent<Item> ().getItemName ());
+			//    Debug.Log (GetComponent<Item> ().getItemName ());
 			if (GetComponent<Item> ().getItemName () == "Holz")
 			{
 
@@ -37,6 +37,18 @@ public class CollectItemController : MonoBehaviour {
 				Destroy (gameObject);
 
 			}
+	// Lebensenergie zu gewinn
+			if (GetComponent<Item> ().getItemName () == "Health") 
+			{
+				GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ().addLife();
+
+
+
+				Destroy (gameObject);
+
+			}
+
+
 
         }
     }

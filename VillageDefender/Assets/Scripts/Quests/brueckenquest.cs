@@ -6,7 +6,7 @@ public class brueckenquest : MonoBehaviour {
 	private Player player;
 	private int holzanzahl = 0;
 
-	private GameObject bruecke;
+	public GameObject bruecke;
 	private GameObject waechter;
 
 
@@ -25,9 +25,14 @@ public class brueckenquest : MonoBehaviour {
 		if (holzanzahl >= 5) {
 
 			DialogueManager.questprogress = 1;	
-			// Holzbrücke anzeigen
-			bruecke = GameObject.Find ("Holzbruecke");
-			bruecke.GetComponent<Renderer>().enabled = true;
+
+			bruecke.SetActive (true);
+		// Holzbrücke anzeigen
+		//	bruecke = GameObject.Find ("Holzbruecke");
+		//	bruecke.GetComponent<Renderer>().enabled = true;
+
+
+
 			waechter = GameObject.Find ("Brueckenwaechter");
 			Destroy (waechter);
 

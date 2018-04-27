@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Bridge
   - NPCEndkampf
+  - AudioController
   layers:
   - Default
   - TransparentFX
