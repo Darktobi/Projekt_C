@@ -1,29 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnCollectable : MonoBehaviour {
 
     public GameObject spawnableItem;
-   // public float interval = 2;
+   //  public float interval = 2;
 
     public int life = 3;
+	private int lifestatus;
     public int maxNumberOfItems = 5;
+
 	public GameObject spawnMonster;
-
-
-	 public AudioSource audioController;
-
+	public AudioSource audioController;
 	public AudioClip chopwood;
 	public AudioClip treefalldown;
+	public Image healthstatus;
+	public GameObject healthbar;
 
 
-	
+	//Healthbar variable für Anzeigenberechung
+	private void Start(){
+		lifestatus = life;
+	}
+
 
 
     private void FixedUpdate()
     {
-        if (life <= 0)
+        if (lifestatus <= 0)
         {
             spawnItem();
 			audioController.PlayOneShot (treefalldown);
@@ -35,17 +41,22 @@ public class SpawnCollectable : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
+
+
             if (Input.GetKeyUp(KeyCode.Space))
             {
-				
+
+
 			//verhindert schnelles baumfällen, wartet auf ende sound
 				if (!audioController.isPlaying) {
 
 					audioController.PlayOneShot (chopwood);
 				
-					life--;
+					lifestatus--;
 
-
+					//Healthbar wird aktuallisiert
+					healthbar.SetActive(true);
+					healthstatus.fillAmount = (float)lifestatus / (float)life;
 				}
             }
         }
