@@ -12,28 +12,53 @@ public class SpawnCollectable : MonoBehaviour {
 	private int lifestatus;
     public int maxNumberOfItems = 5;
 
+	private bool aktiv = true;
+
 	public GameObject spawnMonster;
 	public AudioSource audioController;
 	public AudioClip chopwood;
 	public AudioClip treefalldown;
 	public Image healthstatus;
 	public GameObject healthbar;
+	public Animator anim;
+
+
 
 
 	//Healthbar variable für Anzeigenberechung
 	private void Start(){
 		lifestatus = life;
+		anim = GetComponent<Animator>();
+
+
+		//stamm.GetComponent ();
+
 	}
+
 
 
 
     private void FixedUpdate()
     {
-        if (lifestatus <= 0)
+        if (lifestatus <= 0 && aktiv  )
         {
-            spawnItem();
+         
+			//Nur 1mal Sound abspielen, nur einmal iteSpawn oder if (spielt)  {spielt=false}
+			//if (!audioController.isPlaying) {
+			//	audioController.PlayOneShot (treefalldown);
+			//	spawnItem();
+			//}
 			audioController.PlayOneShot (treefalldown);
-            Destroy(gameObject);
+			anim.Play("treefall" , -1);
+			spawnItem();
+			aktiv = false;
+			healthbar.SetActive (false);
+
+			//gameObject.GetComponent<SpriteRenderer> ().sprite = stamm;
+			//Resources.Load ("stamm") as Sprite;
+
+		   Destroy(gameObject,2);
+
         }
     }
 
