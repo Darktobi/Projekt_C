@@ -5,11 +5,14 @@ using UnityEngine;
 public class PlayerMovementController : MonoBehaviour {
 
     public float speed = 10;
+    public float maxAttackCooldown = 0.5f;
 
     private enum Direction { Up, Down, Left, Right };
 
     private Direction currentDirection;
 	private static bool playerExists;
+
+    private float attackCooldownTimer = 0.0f;
 
     private int attackDirection = 1;
 
@@ -62,30 +65,38 @@ public class PlayerMovementController : MonoBehaviour {
 
         rbody.velocity = dir.normalized * speed;
 
-        if (Input.GetKeyUp(KeyCode.V))
+        if (attackCooldownTimer <= 0)
         {
-            Vector3 spawnPos = transform.position + transform.forward;
-            if (attackDirection == 1)
+            if (Input.GetKeyUp(KeyCode.V))
             {
-                spawnPos += Vector3.up;
-            }
-            else if (attackDirection == 2)
-            {
-                spawnPos += Vector3.right;
-            }
-            else if (attackDirection == 3)
-            {
-                spawnPos += Vector3.down;
-            }
-            else if(attackDirection == 4)
-            {
-                spawnPos += Vector3.left;
-            }
+                Vector3 spawnPos = transform.position + transform.forward;
+                if (attackDirection == 1)
+                {
+                    spawnPos += Vector3.up;
+                }
+                else if (attackDirection == 2)
+                {
+                    spawnPos += Vector3.right;
+                }
+                else if (attackDirection == 3)
+                {
+                    spawnPos += Vector3.down;
+                }
+                else if (attackDirection == 4)
+                {
+                    spawnPos += Vector3.left;
+                }
 
-            GetComponent<Player>().equippedWeapon.direction = attackDirection;
-            Instantiate(GetComponent<Player>().equippedWeapon, spawnPos, transform.rotation);
+                GetComponent<Player>().equippedWeapon.direction = attackDirection;
+                Instantiate(GetComponent<Player>().equippedWeapon, spawnPos, transform.rotation);
+
+                attackCooldownTimer = maxAttackCooldown;
+            }
         }
-
+        else
+        {
+            attackCooldownTimer -= Time.deltaTime;
+        }
     }
 
     private void setCurrentDirection(bool vertical, float value)
