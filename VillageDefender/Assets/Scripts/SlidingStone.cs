@@ -12,6 +12,7 @@ public class SlidingStone : MonoBehaviour {
     private float currentX;
     private float currentY;
 
+    public float movePx = 1;
     public float slideTimer = 0.4f;
     public float positionTimer = 0.5f;
 
@@ -34,9 +35,9 @@ public class SlidingStone : MonoBehaviour {
 
             if(positionTimer <= 0)
             {
-                Debug.Log("Stay on position");
                 currentX = transform.position.x;
                 currentY = transform.position.y;
+                
             }
             else
             {
@@ -45,9 +46,15 @@ public class SlidingStone : MonoBehaviour {
         }
 	}
 
+    public void reset()
+    {
+        transform.position = new Vector2(startX, startY);
+        hasSlide = false;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "SlideStone")
+        if (collision.gameObject.tag == "SlideStone" || collision.gameObject.tag == "Wall")
         {
             transform.position = new Vector2(currentX, currentY);
 
@@ -86,6 +93,7 @@ public class SlidingStone : MonoBehaviour {
         if (collision.gameObject.tag == "Player")
         {
             slideTimer = 0.4f;
+
         }
     }
 
@@ -96,22 +104,22 @@ public class SlidingStone : MonoBehaviour {
         //Right
         if (collision.transform.position.x <= transform.position.x - 0.6f)
         {
-            GetComponent<Rigidbody2D>().transform.position = new Vector2(transform.position.x + transform.localScale.x, transform.position.y);
+            GetComponent<Rigidbody2D>().transform.position = new Vector2(transform.position.x + movePx, transform.position.y);
         }
         //Left
         else if(collision.transform.position.x >= transform.position.x + 0.6f)
         {
-            GetComponent<Rigidbody2D>().transform.position = new Vector2(transform.position.x - transform.localScale.x, transform.position.y);
+            GetComponent<Rigidbody2D>().transform.position = new Vector2(transform.position.x - movePx, transform.position.y);
         }
         //Down
         else if (collision.transform.position.y >= transform.position.y + 0.7f)
         {
-            GetComponent<Rigidbody2D>().transform.position = new Vector2(transform.position.x, transform.position.y - transform.localScale.y);
+            GetComponent<Rigidbody2D>().transform.position = new Vector2(transform.position.x, transform.position.y - movePx);
         }
         //Up
         else if (collision.transform.position.y <= transform.position.y - 0.7f)
         {
-            GetComponent<Rigidbody2D>().transform.position = new Vector2(transform.position.x, transform.position.y + transform.localScale.y);
+            GetComponent<Rigidbody2D>().transform.position = new Vector2(transform.position.x, transform.position.y + movePx);
         }
     }
 

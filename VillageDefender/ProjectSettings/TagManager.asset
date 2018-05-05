@@ -10,6 +10,7 @@ TagManager:
   - NPCEndkampf
   - AudioController
   - SlideStone
+  - Wall
   layers:
   - Default
   - TransparentFX
