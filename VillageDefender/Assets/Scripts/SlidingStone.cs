@@ -70,13 +70,14 @@ public class SlidingStone : MonoBehaviour {
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             if (!hasSlide)
             {
-                if(slideTimer <= 0)
+                if (slideTimer <= 0)
                 {
                     GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                     move(collision);
@@ -97,7 +98,7 @@ public class SlidingStone : MonoBehaviour {
         }
     }
 
-    private void move(Collision2D collision)
+    private void move(Collider2D collision)
     {
         // In which Direction should the block move
 
