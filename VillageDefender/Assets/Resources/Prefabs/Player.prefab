@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4172120912030628}
   - component: {fileID: 212699148979198940}
+  - component: {fileID: 114120620071643536}
   - component: {fileID: 95244745073216492}
   - component: {fileID: 50743080501186746}
   - component: {fileID: 114435476893181434}
@@ -108,6 +109,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114120620071643536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1283959225649156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbba657037c4b5f4281df8964d0b3dda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114435476893181434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,8 +132,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questfortschritt: 0
+  life: 100
   equippedWeapon: {fileID: 114372463410251522, guid: de8c366da86004841b434b1bda1b5ea3,
     type: 2}
+  audioController: {fileID: 0}
+  takeDamageSound: {fileID: 0}
 --- !u!114 &114664724123606354
 MonoBehaviour:
   m_ObjectHideFlags: 1

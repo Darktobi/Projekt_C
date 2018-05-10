@@ -165,9 +165,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnableItem: {fileID: 1247407199158294, guid: 7b65bbe894ea39d45b92afc4fe61aaef,
     type: 2}
-  interval: 2
   life: 3
   maxNumberOfItems: 5
+  spawnMonster: {fileID: 0}
+  audioController: {fileID: 0}
+  chopwood: {fileID: 0}
+  treefalldown: {fileID: 0}
+  healthstatus: {fileID: 0}
+  healthbar: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!212 &212376905060470208
 SpriteRenderer:
   m_ObjectHideFlags: 1

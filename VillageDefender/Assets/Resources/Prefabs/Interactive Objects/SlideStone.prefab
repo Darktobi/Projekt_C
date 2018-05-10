@@ -180,6 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c266cf8635fdc3d4ba4933fa056bdd48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movePx: 1
   slideTimer: 0.4
   positionTimer: 0.5
 --- !u!212 &212604069919605612

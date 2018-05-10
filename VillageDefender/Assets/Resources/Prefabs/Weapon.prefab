@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   str: 0
-  direction: 4
+  direction: 2
 --- !u!212 &212746728279723966
 SpriteRenderer:
   m_ObjectHideFlags: 1

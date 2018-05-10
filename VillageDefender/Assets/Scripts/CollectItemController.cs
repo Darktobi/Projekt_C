@@ -23,7 +23,7 @@ public class CollectItemController : MonoBehaviour {
 			{
 
 				GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ().addWood ();
-				GameObject item = Resources.Load ("Prefabs/Holz") as GameObject;
+				GameObject item = Resources.Load ("Prefabs/Collectable Objects/Holz") as GameObject;
 				GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ().addItem (item.GetComponent<Item> ());
 				Destroy (gameObject);
 			}

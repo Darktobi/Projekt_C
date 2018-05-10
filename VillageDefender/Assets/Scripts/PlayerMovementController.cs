@@ -97,6 +97,21 @@ public class PlayerMovementController : MonoBehaviour {
         {
             attackCooldownTimer -= Time.deltaTime;
         }
+
+		//Animation Schwertschlag, bzw, Axtschlag
+
+		if (anim.GetBool ("is walking") == false && Input.GetKeyUp (KeyCode.Space)) {
+			anim.SetBool ("ischoping", true);
+		} else {
+			anim.SetBool ("ischoping", false);
+		}
+
+		if (anim.GetBool ("is walking") == false && Input.GetKeyUp (KeyCode.V)) {
+			anim.SetBool ("isattacking", true);
+		} else {
+			anim.SetBool ("isattacking", false);
+		}
+
     }
 
     private void setCurrentDirection(bool vertical, float value)
