@@ -62,29 +62,42 @@ public class PlayerMovementController : MonoBehaviour {
 
         rbody.velocity = dir.normalized * speed;
 
-        if (Input.GetKeyUp(KeyCode.V))
-        {
-            Vector3 spawnPos = transform.position + transform.forward;
-            if (attackDirection == 1)
-            {
-                spawnPos += Vector3.up;
-            }
-            else if (attackDirection == 2)
-            {
-                spawnPos += Vector3.right;
-            }
-            else if (attackDirection == 3)
-            {
-                spawnPos += Vector3.down;
-            }
-            else if(attackDirection == 4)
-            {
-                spawnPos += Vector3.left;
-            }
+		if (Input.GetKeyUp (KeyCode.V)) {
 
-            GetComponent<Player>().equippedWeapon.direction = attackDirection;
-            Instantiate(GetComponent<Player>().equippedWeapon, spawnPos, transform.rotation);
-        }
+
+			Vector3 spawnPos = transform.position + transform.forward;
+			if (attackDirection == 1) {
+				spawnPos += Vector3.up;
+			} else if (attackDirection == 2) {
+				spawnPos += Vector3.right;
+			} else if (attackDirection == 3) {
+				spawnPos += Vector3.down;
+			} else if (attackDirection == 4) {
+				spawnPos += Vector3.left;
+			}
+
+			GetComponent<Player> ().equippedWeapon.direction = attackDirection;		
+			Instantiate (GetComponent<Player> ().equippedWeapon, spawnPos, transform.rotation);
+
+		}
+
+		//Animation Schwertschlag, bzw, Axtschlag
+
+		if (anim.GetBool ("is walking") == false && Input.GetKeyUp (KeyCode.Space)) {
+			anim.SetBool ("ischoping", true);
+		} else {
+			anim.SetBool ("ischoping", false);
+		}
+
+		if (anim.GetBool ("is walking") == false && Input.GetKeyUp (KeyCode.V)) {
+			anim.SetBool ("isattacking", true);
+		} else {
+			anim.SetBool ("isattacking", false);
+		}
+
+
+
+
 
     }
 
