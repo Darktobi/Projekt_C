@@ -8,12 +8,8 @@ public class Weapon : MonoBehaviour {
 
     public int direction = 1;
 
-    Animator anim;
-
 	// Use this for initialization
 	void Start () {
-        anim = GetComponent<Animator>();
-        anim.SetInteger("attackDirection", direction);
     }
 	
 	// Update is called once per frame
