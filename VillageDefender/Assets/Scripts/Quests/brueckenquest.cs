@@ -7,6 +7,7 @@ public class brueckenquest : MonoBehaviour {
 	private int holzanzahl = 0;
 
 	public GameObject bruecke;
+	public GameObject brueckenwaechter;
 	private GameObject waechter;
 
 
@@ -39,8 +40,8 @@ public class brueckenquest : MonoBehaviour {
 
 
 
-			waechter = GameObject.Find ("Brueckenwaechter");
-			Destroy (waechter);
+
+			brueckenwaechter.SetActive (false);
 
 				
 			//Destroy (gameObject);
@@ -58,6 +59,7 @@ public class brueckenquest : MonoBehaviour {
 
 		if (FindObjectOfType<Player> ().questfortschritt > 0) {
 			bruecke.SetActive (true);
+			brueckenwaechter.SetActive(false);
 		}
 
 	}

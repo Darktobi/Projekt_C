@@ -113,6 +113,78 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &11278728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1970058946227538, guid: 6f58de70a21e927468ef6eb80e430885,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 11278729}
+  - component: {fileID: 11278731}
+  - component: {fileID: 11278730}
+  m_Layer: 0
+  m_Name: HealthStatus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &11278729
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 224882348020270818, guid: 6f58de70a21e927468ef6eb80e430885,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 11278728}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 390933946}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00000037625, y: 0.0000028759}
+  m_SizeDelta: {x: 2.0872, y: 0.0735}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &11278730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114830186488664188, guid: 6f58de70a21e927468ef6eb80e430885,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 11278728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 571339007c202664e8d188dfbc514ed2, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &11278731
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 222520904742665926, guid: 6f58de70a21e927468ef6eb80e430885,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 11278728}
 --- !u!4 &18662847 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4050439093056738, guid: 3d618c2c09e621440bbfa10de791b5d6,
@@ -1451,7 +1523,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000000059604645, y: 0.00000017881393}
+  m_Offset: {x: -0.000000059604645, y: 0.043606177}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1462,7 +1534,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0000004, y: 1.0000002}
+  m_Size: {x: 1.0000004, y: 1.0872122}
   m_EdgeRadius: 0
 --- !u!114 &273834032
 MonoBehaviour:
@@ -1478,6 +1550,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
+    - Denk an das Dorf, Sie brauchen Dich jetzt!!
     - Denk an das Dorf, Sie brauchen Dich jetzt!!
 --- !u!1 &274789940
 GameObject:
@@ -2000,6 +2073,79 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 342707637}
+--- !u!1 &390933945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1682357243580356, guid: 6f58de70a21e927468ef6eb80e430885,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 390933946}
+  - component: {fileID: 390933948}
+  - component: {fileID: 390933947}
+  m_Layer: 0
+  m_Name: Healthbackground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &390933946
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 224379829392517992, guid: 6f58de70a21e927468ef6eb80e430885,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 390933945}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 11278729}
+  m_Father: {fileID: 725104176}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.102, y: 0.09}
+  m_SizeDelta: {x: 2.1526, y: 0.1078}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &390933947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114499872970223068, guid: 6f58de70a21e927468ef6eb80e430885,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 390933945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 81071b7acd0a87e47b2180214fed9384, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &390933948
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 222902348788177776, guid: 6f58de70a21e927468ef6eb80e430885,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 390933945}
 --- !u!1 &419216608
 GameObject:
   m_ObjectHideFlags: 0
@@ -3841,6 +3987,105 @@ Transform:
   m_Father: {fileID: 1356375754}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &725104175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1648131094882012, guid: 6f58de70a21e927468ef6eb80e430885,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 725104176}
+  - component: {fileID: 725104179}
+  - component: {fileID: 725104178}
+  - component: {fileID: 725104177}
+  m_Layer: 0
+  m_Name: Healthbar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &725104176
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 224679263806604426, guid: 6f58de70a21e927468ef6eb80e430885,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 725104175}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.092967, y: 3.0518763, z: 5.6058416}
+  m_Children:
+  - {fileID: 390933946}
+  m_Father: {fileID: 1806306832}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.12, y: 4.98}
+  m_SizeDelta: {x: 3.643, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &725104177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114147959654227606, guid: 6f58de70a21e927468ef6eb80e430885,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 725104175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &725104178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114476894868691346, guid: 6f58de70a21e927468ef6eb80e430885,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 725104175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &725104179
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 223666211218138090, guid: 6f58de70a21e927468ef6eb80e430885,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 725104175}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 8
+  m_TargetDisplay: 0
 --- !u!1 &750994826
 GameObject:
   m_ObjectHideFlags: 0
@@ -5870,7 +6115,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.04613325}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5881,7 +6126,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.99999994, y: 1}
+  m_Size: {x: 0.99999994, y: 1.0922663}
   m_EdgeRadius: 0
 --- !u!114 &1173060743
 MonoBehaviour:
@@ -5897,6 +6142,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
+    - Denk an das Dorf, Sie brauchen Dich jetzt!!
     - Denk an das Dorf, Sie brauchen Dich jetzt!!
 --- !u!1 &1194161875
 GameObject:
@@ -6293,7 +6539,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.04670292}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6304,7 +6550,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.0934058}
   m_EdgeRadius: 0
 --- !u!114 &1315645104
 MonoBehaviour:
@@ -6320,6 +6566,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
+    - Denk an das Dorf, Sie brauchen Dich jetzt!!
     - Denk an das Dorf, Sie brauchen Dich jetzt!!
 --- !u!1 &1321119315
 GameObject:
@@ -8173,6 +8420,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1806306832}
+  - component: {fileID: 1806306837}
   - component: {fileID: 1806306831}
   - component: {fileID: 1806306830}
   - component: {fileID: 1806306833}
@@ -8258,6 +8506,7 @@ Transform:
   m_LocalScale: {x: 0.17838533, y: 0.17838533, z: 0.17838533}
   m_Children:
   - {fileID: 257082103}
+  - {fileID: 725104176}
   m_Father: {fileID: 875887468}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8331,10 +8580,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d57d320ef2470489e52fa585f4d952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDmg: 1
-  health: 5
-  spawnableItem: {fileID: 0}
-  maxNumberOfItems: 2
+  attackDmg: 10
+  health: 8
+  spawnableItem: {fileID: 1534517222902754, guid: 148424036a9fcad48a54b3e27fd7b7b2,
+    type: 2}
+  maxNumberOfItems: 1
+--- !u!114 &1806306837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1806306829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bbb708b4c099374b99be0ffb5fd20eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthstatus: {fileID: 11278730}
+  healthbar: {fileID: 725104175}
 --- !u!1 &1817070376
 GameObject:
   m_ObjectHideFlags: 0
@@ -8557,6 +8820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bruecke: {fileID: 423988357}
+  brueckenwaechter: {fileID: 661881846}
 --- !u!1 &1882149037
 GameObject:
   m_ObjectHideFlags: 0
@@ -9477,7 +9741,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000000059604645, y: 0.0000019073486}
+  m_Offset: {x: -0.000000059604645, y: -0.047183037}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -9488,7 +9752,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0000002, y: 1.0000002}
+  m_Size: {x: 1.0000002, y: 1.0943701}
   m_EdgeRadius: 0
 --- !u!114 &2099347948
 MonoBehaviour:
@@ -9504,6 +9768,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
+    - Denk an das Dorf, Sie brauchen Dich jetzt!!
     - Denk an das Dorf, Sie brauchen Dich jetzt!!
 --- !u!1 &2107398999
 GameObject:
