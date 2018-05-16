@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SlideStoneReset : MonoBehaviour {
 
+    public Sprite resetOff;
+    public Sprite resetOn;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -25,6 +28,17 @@ public class SlideStoneReset : MonoBehaviour {
             {
                 slideStones[i].GetComponent<SlidingStone>().reset();
             }
+
+            GetComponent<SpriteRenderer>().sprite = resetOn;
+            GetComponent<AudioSource>().Play();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            GetComponent<SpriteRenderer>().sprite = resetOff;
         }
     }
 }
