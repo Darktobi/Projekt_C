@@ -65,7 +65,7 @@ public class Player : MonoBehaviour {
 	public void addLife()
 	{
 		if (this.life < 100) {
-			life++;
+			life = life + 10;
 		}
 	}
 
@@ -80,6 +80,11 @@ public class Player : MonoBehaviour {
         collectedWood++;
        
     }
+
+	public void clearWood()
+	{
+		collectedWood = 0;
+	}
 
 	public void addSword()
 	{

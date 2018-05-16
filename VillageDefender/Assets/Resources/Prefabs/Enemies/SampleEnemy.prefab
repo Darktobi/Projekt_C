@@ -134,6 +134,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDmg: 2
   health: 5
+  spawnableItem: {fileID: 1534517222902754, guid: 148424036a9fcad48a54b3e27fd7b7b2,
+    type: 2}
+  maxNumberOfItems: 2
 --- !u!114 &114926038032782586
 MonoBehaviour:
   m_ObjectHideFlags: 1

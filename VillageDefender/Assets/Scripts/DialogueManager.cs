@@ -113,9 +113,9 @@ public class DialogueManager : MonoBehaviour {
 
 		//Text geschwindigkeit 4 frame pause
 			yield return null;
-			yield return null;
-			yield return null;
-			yield return null;
+		//	yield return null;
+		//	yield return null;
+		//	yield return null;
 
 
 

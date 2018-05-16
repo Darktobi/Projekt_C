@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class UIHandler : MonoBehaviour {
 
+
+	public Image healthstatus;
+
+
     public Text playerLife;
  //   public Text collectedWood;
     private Player player;
@@ -19,9 +23,11 @@ public class UIHandler : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         playerLife.text = player.getCurrentLife().ToString();
+		healthstatus.fillAmount = (float)player.getCurrentLife () / 100;
+
 
 		if (player.getCurrentLife () <= 0) {
-			Debug.Log ("Game Over");
+			//Debug.Log ("Game Over");
 			Time.timeScale = 0;
 			displayGameOverDead.SetActive (true);
 		}
