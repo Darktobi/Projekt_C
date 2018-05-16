@@ -12,9 +12,12 @@ public class SlidingStone : MonoBehaviour {
     private float currentX;
     private float currentY;
 
+    private PlayerMovementController playerMovement;
+
     public float movePx = 1;
     public float slideTimer = 0.4f;
     public float positionTimer = 0.5f;
+    
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +27,8 @@ public class SlidingStone : MonoBehaviour {
         currentX = startX;
         currentY = startY;
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovementController>();
     }
 	
 	// Update is called once per frame
@@ -50,6 +55,9 @@ public class SlidingStone : MonoBehaviour {
     {
         transform.position = new Vector2(startX, startY);
         hasSlide = false;
+        currentX = startX;
+        currentY = startY;
+        positionTimer = 0.4f;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -64,7 +72,7 @@ public class SlidingStone : MonoBehaviour {
                 if(currentX == startX && currentY == startY)
                 {
                     hasSlide = false;
-                    positionTimer = 0.5f;
+                    positionTimer = 0.4f;
                 }
             }
         }
@@ -75,7 +83,7 @@ public class SlidingStone : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (!hasSlide)
+            if (!hasSlide && playerMovement.isMoving)
             {
                 if (slideTimer <= 0)
                 {
@@ -85,6 +93,10 @@ public class SlidingStone : MonoBehaviour {
                     hasSlide = true;
                 }
                 slideTimer -= Time.deltaTime;
+            }
+            else
+            {
+                slideTimer = 0.4f;
             }
         }
     }

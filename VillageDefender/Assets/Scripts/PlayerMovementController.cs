@@ -6,6 +6,7 @@ public class PlayerMovementController : MonoBehaviour {
 
     public float speed = 10;
     public float maxAttackCooldown = 0.5f;
+    public bool isMoving;
 
     private enum Direction { Up, Down, Left, Right };
 
@@ -26,6 +27,7 @@ public class PlayerMovementController : MonoBehaviour {
     {
         rbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        isMoving = false;
 
         currentDirection = Direction.Up;
 
@@ -56,11 +58,12 @@ public class PlayerMovementController : MonoBehaviour {
             anim.SetBool("is walking", true);
             anim.SetFloat("input_x", dir.x);
             anim.SetFloat("input_y", dir.y);
-
+            isMoving = true;
         }
         else
         {
             anim.SetBool("is walking", false);
+            isMoving = false;
         }
 
         rbody.velocity = dir.normalized * speed;
