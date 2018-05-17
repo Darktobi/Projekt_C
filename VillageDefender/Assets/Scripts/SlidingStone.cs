@@ -5,85 +5,107 @@ using UnityEngine;
 public class SlidingStone : MonoBehaviour {
 
     private bool hasSlide;
+    private bool hasForecast;
+    private bool canMove;
+
+    private int moveDirection;
+
+    private float slideTimer;
+    private float positionTimer;
 
     private float startX;
     private float startY;
 
-    private float currentX;
-    private float currentY;
+    private PlayerMovementController playerMovement;
 
     public float movePx = 1;
-    public float slideTimer = 0.4f;
-    public float positionTimer = 0.5f;
+    public float startSlideTimer = 0.2f;
+    public float startPositionTimer = 0.2f;
 
-	// Use this for initialization
-	void Start () {
+    public GameObject forecast;
+
+    // Use this for initialization
+    void Start () {
         hasSlide = false;
         startX = transform.position.x;
         startY = transform.position.y;
-        currentX = startX;
-        currentY = startY;
+        slideTimer = startSlideTimer;
+        positionTimer = startPositionTimer;
+
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovementController>();
     }
 	
 	// Update is called once per frame
 	void Update () {
 		
-        if(hasSlide)
+        //If Forecast finds free position, slide Stone in that direction
+        if(hasForecast && !hasSlide)
         {
-            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-
             if(positionTimer <= 0)
             {
-                currentX = transform.position.x;
-                currentY = transform.position.y;
-                
+                canMove = true;
             }
             else
             {
                 positionTimer -= Time.deltaTime;
             }
         }
+
+        // Move slide stone if forecast stay on free position for a few moments
+        if (canMove)
+        {
+            forecast.transform.position = new Vector2(startX, startY);
+            move();
+            canMove = false;
+            hasSlide = true;
+            positionTimer = startPositionTimer;
+            GetComponent<AudioSource>().PlayOneShot(GetComponent<AudioSource>().clip);
+        }
 	}
 
     public void reset()
     {
         transform.position = new Vector2(startX, startY);
+        forecast.transform.position = new Vector2(startX, startY);
+        hasForecast = false;
         hasSlide = false;
+        positionTimer = startPositionTimer;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "SlideStone" || collision.gameObject.tag == "Wall")
         {
-            transform.position = new Vector2(currentX, currentY);
-
-            if (hasSlide)
+            // remove only forecast from SlideStone that haven't moved
+            if (hasForecast && !hasSlide)
             {
-                //Only stone that has moved can slide again
-                if(currentX == startX && currentY == startY)
-                {
-                    hasSlide = false;
-                    positionTimer = 0.5f;
-                }
+                forecast.transform.position = new Vector2(startX, startY);
+                hasForecast = false;
+                positionTimer = startPositionTimer;
             }
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
+        //Forecast stone moving only if player presses long enough against the stone
         if (collision.gameObject.tag == "Player")
         {
-            if (!hasSlide)
+            if (!hasForecast && playerMovement.isMoving)
             {
-                if(slideTimer <= 0)
+                if (slideTimer <= 0)
                 {
-                    GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
-                    move(collision);
-                    GetComponent<AudioSource>().PlayOneShot(GetComponent<AudioSource>().clip);
-                    hasSlide = true;
+                    moveForecast(collision);
+                    hasForecast = true;
                 }
                 slideTimer -= Time.deltaTime;
+            }
+            else
+            {
+                slideTimer = startSlideTimer;
             }
         }
     }
@@ -92,34 +114,63 @@ public class SlidingStone : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
-            slideTimer = 0.4f;
-
+            slideTimer = startSlideTimer;
         }
     }
 
-    private void move(Collision2D collision)
+    private void move()
     {
         // In which Direction should the block move
 
         //Right
-        if (collision.transform.position.x <= transform.position.x - 0.6f)
+        if (moveDirection == 0)
         {
             GetComponent<Rigidbody2D>().transform.position = new Vector2(transform.position.x + movePx, transform.position.y);
         }
         //Left
-        else if(collision.transform.position.x >= transform.position.x + 0.6f)
+        else if(moveDirection == 1)
         {
             GetComponent<Rigidbody2D>().transform.position = new Vector2(transform.position.x - movePx, transform.position.y);
         }
         //Down
-        else if (collision.transform.position.y >= transform.position.y + 0.7f)
+        else if (moveDirection == 2)
         {
             GetComponent<Rigidbody2D>().transform.position = new Vector2(transform.position.x, transform.position.y - movePx);
         }
         //Up
-        else if (collision.transform.position.y <= transform.position.y - 0.7f)
+        else if (moveDirection == 3)
         {
             GetComponent<Rigidbody2D>().transform.position = new Vector2(transform.position.x, transform.position.y + movePx);
+        }
+    }
+
+    private void moveForecast(Collider2D collision)
+    {
+        // In which Direction should the forecast move
+
+        //Right
+        if (collision.transform.position.x <= transform.position.x - 0.6f)
+        {
+            forecast.transform.position = new Vector2(transform.position.x + movePx, transform.position.y);
+            moveDirection = 0;
+        }
+        //Left
+        else if (collision.transform.position.x >= transform.position.x + 0.6f)
+        {
+           forecast.transform.position = new Vector2(transform.position.x - movePx, transform.position.y);
+            moveDirection = 1;
+        }
+        //Down
+        else if (collision.transform.position.y >= transform.position.y + 0.7f)
+        {
+            forecast.transform.position = new Vector2(transform.position.x, transform.position.y - movePx);
+            moveDirection = 2;
+        }
+        //Up
+        else if (collision.transform.position.y <= transform.position.y - 0.7f)
+        {
+            forecast.transform.position = new Vector2(transform.position.x, transform.position.y + movePx);
+            moveDirection = 3;
         }
     }
 
