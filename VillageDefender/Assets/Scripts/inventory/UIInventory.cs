@@ -50,6 +50,8 @@ public class UIInventory : MonoBehaviour {
 
 			addinventar ();
 			// Debug.Log ("Hallo hab Holz");
+		} else {
+			clearinventar ();
 		}
 
 		if (player.getCollectedSword () > 0) {

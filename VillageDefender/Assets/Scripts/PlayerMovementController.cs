@@ -106,7 +106,13 @@ public class PlayerMovementController : MonoBehaviour {
 			anim.SetBool ("ischoping", false);
 		}
 
-		if (anim.GetBool ("is walking") == false && Input.GetKeyUp (KeyCode.V)) {
+		if (anim.GetBool ("is walking") == false && Input.GetKeyUp (KeyCode.V) && (GetComponent<Player>().questfortschritt== 0)) {
+			anim.SetBool ("iswoodattacking", true);
+		} else {
+			anim.SetBool ("iswoodattacking", false);
+		}
+
+		if (anim.GetBool ("is walking") == false && Input.GetKeyUp (KeyCode.V) && (GetComponent<Player>().questfortschritt >=1 )) {
 			anim.SetBool ("isattacking", true);
 		} else {
 			anim.SetBool ("isattacking", false);

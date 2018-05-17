@@ -7,6 +7,7 @@ public class brueckenquest : MonoBehaviour {
 	private int holzanzahl = 0;
 
 	public GameObject bruecke;
+	public GameObject brueckenwaechter;
 	private GameObject waechter;
 
 
@@ -24,17 +25,23 @@ public class brueckenquest : MonoBehaviour {
 
 		if (holzanzahl >= 5) {
 
+			FindObjectOfType<Player> ().clearWood ();
+
 			DialogueManager.questprogress = 1;	
 
 			bruecke.SetActive (true);
+
+
+
+
 		// Holzbrücke anzeigen
 		//	bruecke = GameObject.Find ("Holzbruecke");
 		//	bruecke.GetComponent<Renderer>().enabled = true;
 
 
 
-			waechter = GameObject.Find ("Brueckenwaechter");
-			Destroy (waechter);
+
+			brueckenwaechter.SetActive (false);
 
 				
 			//Destroy (gameObject);
@@ -47,9 +54,14 @@ public class brueckenquest : MonoBehaviour {
 
 
 
-	// Use this for initialization
+	// Brücke soll nach szenenwechsel immernoch da sein, wenn SChwert aufgesammelt
 	void Start () {
-		
+
+		if (FindObjectOfType<Player> ().questfortschritt > 0) {
+			bruecke.SetActive (true);
+			brueckenwaechter.SetActive(false);
+		}
+
 	}
 	
 	// Update is called once per frame

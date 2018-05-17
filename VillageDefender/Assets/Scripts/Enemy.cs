@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour {
 
     public int attackDmg = 2;
     public int health = 3;
+	public GameObject spawnableItem;
+	public int maxNumberOfItems = 2;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +19,7 @@ public class Enemy : MonoBehaviour {
 		
         if(health <= 0)
         {
+			spawnItem ();
             DestroyObject(gameObject);
         }
 	}
@@ -43,4 +46,33 @@ public class Enemy : MonoBehaviour {
         }
 
     }
+
+
+
+	// redundant später klasse erstellen?!
+	void spawnItem()
+	{
+
+		System.Random rnd = new System.Random();
+
+		int numberOfItems = rnd.Next(maxNumberOfItems + 1);
+		int xPosition = (int)transform.position.x;
+		int yPosition = (int)transform.position.y;
+
+
+		for (int i = 0; i <= numberOfItems; i++) {
+			//MonsterSpawn Wahrscheinlichkeit
+			if (rnd.Next (10) < 5) {
+				int xValue = rnd.Next (xPosition - 2, xPosition + 2);
+				int yValue = rnd.Next (yPosition - 2, yPosition + 2);
+				GameObject x = (GameObject)Instantiate (spawnableItem, new Vector3 (xValue, yValue), Quaternion.identity);
+			}
+		}
+
+	}
+
+
+
+
+
 }
