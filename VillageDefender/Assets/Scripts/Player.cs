@@ -8,6 +8,7 @@ public class Player : MonoBehaviour {
     public int life = 100;
     private int collectedWood = 0;
 	private int collectedSword = 0;
+    private int collectedJewel = 0;
 
     private Inventory inventory;
 
@@ -81,12 +82,22 @@ public class Player : MonoBehaviour {
        
     }
 
+    public void addJewel()
+    {
+        collectedJewel++;
+    }
+
 	public void clearWood()
 	{
 		collectedWood = 0;
 	}
 
-	public void addSword()
+    public void clearJewel()
+    {
+        collectedJewel = 0;
+    }
+
+    public void addSword()
 	{
 		collectedSword++;
 
@@ -97,7 +108,12 @@ public class Player : MonoBehaviour {
         return collectedWood;
     }
 
-	public int getCollectedSword()
+    public int getCollectedJewel()
+    {
+        return collectedWood;
+    }
+
+    public int getCollectedSword()
 	{
 		return collectedSword;
 	}
