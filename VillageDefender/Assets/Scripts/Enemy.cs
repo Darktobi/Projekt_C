@@ -45,6 +45,11 @@ public class Enemy : MonoBehaviour {
             player.takeDamage(attackDmg, force, 3500);
         }
 
+        else if(collision.gameObject.tag == "IgnoreEnemy")
+        {
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collision.collider);
+        }
+
     }
 
 
