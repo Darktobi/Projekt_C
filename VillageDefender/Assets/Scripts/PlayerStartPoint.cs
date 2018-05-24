@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerStartPoint : MonoBehaviour {
 
 
-	private PlayerMovementController thePlayer;
+	static private PlayerMovementController thePlayer;
 	private camerafollow theCam;
 
 	public string pointName;

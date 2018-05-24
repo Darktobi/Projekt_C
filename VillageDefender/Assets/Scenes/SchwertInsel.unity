@@ -364,6 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 447837dd8c7dd3e489d4d3ee8349f8d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thePlayer: {fileID: 316942487}
   pointName: AusgangInsel
 --- !u!4 &200757195
 Transform:
