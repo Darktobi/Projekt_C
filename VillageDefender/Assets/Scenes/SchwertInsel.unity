@@ -14628,17 +14628,29 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 4417299260755668, guid: a41638409e876c34bb7c66ebfefa724f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 11.9
+    - target: {fileID: 82759188499302230, guid: a41638409e876c34bb7c66ebfefa724f,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4417299260755668, guid: a41638409e876c34bb7c66ebfefa724f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -5.08
+    - target: {fileID: 82429524164646102, guid: a41638409e876c34bb7c66ebfefa724f,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4417299260755668, guid: a41638409e876c34bb7c66ebfefa724f, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 6.95
+    - target: {fileID: 82429524164646102, guid: a41638409e876c34bb7c66ebfefa724f,
+        type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82324163030676448, guid: a41638409e876c34bb7c66ebfefa724f,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235074384110602, guid: a41638409e876c34bb7c66ebfefa724f, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a41638409e876c34bb7c66ebfefa724f, type: 2}
