@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 7b65be750f369f44caa6ffbbe10d83d3
-timeCreated: 1527591162
+timeCreated: 1527598377
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -90,7 +90,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1532.2
+        width: 1517.2
         height: 1211
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -102,9 +102,9 @@ TextureImporter:
       name: Brunnen_animation_1
       rect:
         serializedVersion: 2
-        x: 1532
+        x: 1517
         y: 0
-        width: 1532.2
+        width: 1517.2
         height: 1211
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -116,9 +116,9 @@ TextureImporter:
       name: Brunnen_animation_2
       rect:
         serializedVersion: 2
-        x: 3064
+        x: 3034
         y: 0
-        width: 1532.2
+        width: 1517.2
         height: 1211
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -130,9 +130,9 @@ TextureImporter:
       name: Brunnen_animation_3
       rect:
         serializedVersion: 2
-        x: 4596
+        x: 4551
         y: 0
-        width: 1532.2
+        width: 1517.2
         height: 1211
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -144,9 +144,9 @@ TextureImporter:
       name: Brunnen_animation_4
       rect:
         serializedVersion: 2
-        x: 6128
+        x: 6068
         y: 0
-        width: 1532.2
+        width: 1517.2
         height: 1211
       alignment: 0
       pivot: {x: 0, y: 0}
