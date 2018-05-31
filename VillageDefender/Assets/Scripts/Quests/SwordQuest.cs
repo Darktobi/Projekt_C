@@ -7,9 +7,26 @@ public class SwordQuest : MonoBehaviour {
     private Player player;
     private int jewelCount = 0;
 
+    private float animationTimer = 2.5f;
+
     public GameObject gate;
     private GameObject waechter;
 
+    Animator anim;
+
+
+    private void Update()
+    {
+        if (anim.GetBool("Open"))
+        {
+            animationTimer -= Time.deltaTime;
+
+            if(animationTimer <= 0)
+            {
+                gate.SetActive(false);
+            }
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -27,7 +44,8 @@ public class SwordQuest : MonoBehaviour {
 
             DialogueManager.questprogress = 1;
 
-            gate.SetActive(false);
+            anim.SetBool("Open", true);
+
         }
 
     }
@@ -37,7 +55,7 @@ public class SwordQuest : MonoBehaviour {
     // Brücke soll nach szenenwechsel immernoch da sein, wenn SChwert aufgesammelt
     void Start()
     {
-
+        anim = GetComponent<Animator>();
         if (FindObjectOfType<Player>().questfortschritt > 0)
         {
             gate.SetActive(false);
