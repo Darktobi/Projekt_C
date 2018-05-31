@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Wasser
+  m_Name: Stein_Ecke_Unten_Rechts
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: b49cdf683535b88468222e00a5140c6b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01e2c9a508fcb6348a0e4c38e5f1cdab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
