@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 9a5f1670517f4e644adde74d4fbbac28
-timeCreated: 1527851046
+guid: 1976a9dca5e7e0f4388c4d3077da39c9
+timeCreated: 1527852846
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -99,10 +99,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 127
+        width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -111,12 +111,12 @@ TextureImporter:
       name: WasserAnimation_1
       rect:
         serializedVersion: 2
-        x: 130
+        x: 137
         y: 0
-        width: 127
+        width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -125,12 +125,12 @@ TextureImporter:
       name: WasserAnimation_2
       rect:
         serializedVersion: 2
-        x: 260
+        x: 270
         y: 0
-        width: 127
+        width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,12 +139,12 @@ TextureImporter:
       name: WasserAnimation_3
       rect:
         serializedVersion: 2
-        x: 389
+        x: 402
         y: 0
-        width: 127
+        width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
