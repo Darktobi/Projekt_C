@@ -28,7 +28,14 @@ public class CollectItemController : MonoBehaviour {
 				Destroy (gameObject);
 			}
 
-			if (GetComponent<Item> ().getItemName () == "Schwert") 
+            if (GetComponent<Item>().getItemName() == "Juwel")
+            {
+
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().addJewel();
+                Destroy(gameObject);
+            }
+
+            if (GetComponent<Item> ().getItemName () == "Schwert") 
 			{
 				GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ().addSword ();
 

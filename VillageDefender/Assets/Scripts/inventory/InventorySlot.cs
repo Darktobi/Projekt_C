@@ -15,4 +15,9 @@ public class InventorySlot : MonoBehaviour {
 		icon.enabled = true;
 
 	}
+
+    public void SubItem()
+    {
+        icon.enabled = false;
+    }
 }

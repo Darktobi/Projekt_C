@@ -58927,6 +58927,12 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114571490236557374, guid: 832a6f4557699ab4e9c1da2ed5a56a6b,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1199a0461135bf044bb998cc8f9b2d46,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 832a6f4557699ab4e9c1da2ed5a56a6b, type: 2}
   m_IsPrefabParent: 0
@@ -59332,7 +59338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9190fb3fa91ec954a90565858ae7d394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Holz
+  itemName: Juwel
   icon: {fileID: 21300000, guid: 1199a0461135bf044bb998cc8f9b2d46, type: 3}
   count: 0
 --- !u!114 &1037906314

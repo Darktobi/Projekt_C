@@ -110,7 +110,7 @@ public class Player : MonoBehaviour {
 
     public int getCollectedJewel()
     {
-        return collectedWood;
+        return collectedJewel;
     }
 
     public int getCollectedSword()
