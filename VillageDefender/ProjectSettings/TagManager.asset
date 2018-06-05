@@ -12,6 +12,7 @@ TagManager:
   - SlideStone
   - Wall
   - IgnoreEnemy
+  - Entry
   layers:
   - Default
   - TransparentFX

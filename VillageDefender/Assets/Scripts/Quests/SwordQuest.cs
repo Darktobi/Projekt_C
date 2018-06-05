@@ -50,13 +50,10 @@ public class SwordQuest : MonoBehaviour {
 
     }
 
-
-
-    // Brücke soll nach szenenwechsel immernoch da sein, wenn SChwert aufgesammelt
     void Start()
     {
         anim = GetComponent<Animator>();
-        if (FindObjectOfType<Player>().questfortschritt > 0)
+        if (FindObjectOfType<Player>().getCollectedSword() > 0)
         {
             gate.SetActive(false);
         }
