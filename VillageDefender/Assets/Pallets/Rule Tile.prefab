@@ -141,6 +141,15 @@ Tilemap:
   m_GameObject: {fileID: 1946720882726490}
   m_Enabled: 1
   m_Tiles:
+  - first: {x: -7, y: 1, z: 0}
+    second:
+      m_TileIndex: 0
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 2
+      m_ColliderType: 1
   - first: {x: -1, y: 1, z: 0}
     second:
       m_TileIndex: 0
@@ -160,6 +169,16 @@ Tilemap:
       m_TileFlags: 2
       m_ColliderType: 1
   m_AnimatedTiles:
+  - first: {x: -7, y: 1, z: 0}
+    second:
+      m_AnimatedSprites:
+      - {fileID: 21300000, guid: 1976a9dca5e7e0f4388c4d3077da39c9, type: 3}
+      - {fileID: 21300002, guid: 1976a9dca5e7e0f4388c4d3077da39c9, type: 3}
+      - {fileID: 21300004, guid: 1976a9dca5e7e0f4388c4d3077da39c9, type: 3}
+      - {fileID: 21300006, guid: 1976a9dca5e7e0f4388c4d3077da39c9, type: 3}
+      m_AnimationSpeed: 1
+      m_AnimationTimeOffset: 0
+      m_IsLooping: 1
   - first: {x: -4, y: 2, z: 0}
     second:
       m_AnimatedSprites:
@@ -171,15 +190,17 @@ Tilemap:
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   m_TileAssetArray:
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 2ed43e6ba868fd94b9f76e85bf619a88, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: e2aad330f4e386047819bd8084e8ec04, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 9a5f1670517f4e644adde74d4fbbac28, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 1976a9dca5e7e0f4388c4d3077da39c9, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data:
       e00: 1
       e01: 0
@@ -198,12 +219,12 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -4, y: 0, z: 0}
-  m_Size: {x: 4, y: 3, z: 1}
+  m_Origin: {x: -7, y: 0, z: 0}
+  m_Size: {x: 7, y: 3, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
