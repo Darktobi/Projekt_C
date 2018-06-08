@@ -1,9 +1,22 @@
 fileFormatVersion: 2
 guid: da4a032d668f7a24e8e4fe4c4347fcdd
-timeCreated: 1526549806
+timeCreated: 1528456258
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Arbeiter_0
+    21300002: Arbeiter_1
+    21300004: Arbeiter_2
+    21300006: Arbeiter_3
+    21300008: Arbeiter_4
+    21300010: Arbeiter_5
+    21300012: Arbeiter_6
+    21300014: Arbeiter_7
+    21300016: Arbeiter_8
+    21300018: Arbeiter_9
+    21300020: Arbeiter_10
+    21300022: Arbeiter_11
+    21300024: Arbeiter_12
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,7 +53,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -66,9 +79,211 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Arbeiter_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1223
+        width: 5
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Arbeiter_1
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 1058
+        width: 537
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Arbeiter_2
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1060
+        width: 534
+        height: 918
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Arbeiter_3
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 1058
+        width: 535
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Arbeiter_4
+      rect:
+        serializedVersion: 2
+        x: 2243
+        y: 1012
+        width: 541
+        height: 966
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Arbeiter_5
+      rect:
+        serializedVersion: 2
+        x: 2935
+        y: 1012
+        width: 543
+        height: 966
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Arbeiter_6
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 1012
+        width: 543
+        height: 966
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Arbeiter_7
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 0
+        width: 472
+        height: 974
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Arbeiter_8
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 3
+        width: 472
+        height: 971
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Arbeiter_9
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 7
+        width: 472
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Arbeiter_10
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 9
+        width: 472
+        height: 965
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Arbeiter_11
+      rect:
+        serializedVersion: 2
+        x: 2899
+        y: 3
+        width: 470
+        height: 971
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Arbeiter_12
+      rect:
+        serializedVersion: 2
+        x: 3520
+        y: 0
+        width: 470
+        height: 974
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
