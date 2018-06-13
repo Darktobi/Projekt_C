@@ -37,9 +37,10 @@ public class DialogueTrigger : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D other2)
 	{
 		
-		//Debug.Log ("Bin raus");
 
-		FindObjectOfType<DialogueManager>().EndDialogue(); 
+		if (other2.tag == "Player") {
+			FindObjectOfType<DialogueManager> ().EndDialogue (); 
+		}
 	}
 
 
