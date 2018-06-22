@@ -13,9 +13,9 @@ public class SpawnCollectable : MonoBehaviour {
     public int maxNumberOfItems = 5;
 
 	private bool aktiv = true;
+    private AudioSource audioController;
 
-	public GameObject spawnMonster;
-	public AudioSource audioController;
+    public GameObject spawnMonster;
 	public AudioClip chopwood;
 	public AudioClip treefalldown;
 	public Image healthstatus;
@@ -29,6 +29,7 @@ public class SpawnCollectable : MonoBehaviour {
 	private void Start(){
 		lifestatus = life;
 		anim = GetComponent<Animator>();
+        audioController = GetComponent<AudioSource>();
 
 
 		//stamm.GetComponent ();
