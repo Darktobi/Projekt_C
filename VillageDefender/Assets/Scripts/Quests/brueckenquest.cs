@@ -57,7 +57,6 @@ public class brueckenquest : MonoBehaviour {
 	// Brücke soll nach szenenwechsel immernoch da sein, wenn SChwert aufgesammelt
 	void Start () {
 
-        Debug.Log(DialogueManager.questprogress);
 		if (DialogueManager.questprogress > 0) {
 			bruecke.SetActive (true);
 			brueckenwaechter.SetActive(false);
