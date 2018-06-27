@@ -724,12 +724,12 @@ Transform:
   - {fileID: 1942815114}
   - {fileID: 638819216}
   - {fileID: 723841725}
-  - {fileID: 1077248160}
   - {fileID: 762502116}
-  - {fileID: 2112163266}
-  - {fileID: 1910022612}
-  - {fileID: 486929936}
+  - {fileID: 1077248160}
   - {fileID: 1315165337}
+  - {fileID: 1910022612}
+  - {fileID: 2112163266}
+  - {fileID: 486929936}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9434,7 +9434,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.9360857, y: 7.5730934}
+  m_Offset: {x: 22.71634, y: 9.103446}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -9445,7 +9445,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20.209879, y: 22.040283}
+  m_Size: {x: 48.43006, y: 34.12937}
   m_EdgeRadius: 0
 --- !u!1 &755519134
 GameObject:
@@ -12279,6 +12279,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4217542032594830, guid: 7a56dd199c73ead44918ba4ee4b930b6, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1179115352221010, guid: 7a56dd199c73ead44918ba4ee4b930b6, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
