@@ -20,8 +20,9 @@ public class Player : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
         inventory = GetComponent<Inventory>();
-				}
+	}
 
 
 
@@ -32,22 +33,6 @@ public class Player : MonoBehaviour {
 
 	}
 
-
-
-	// Update is called once per frame
-	/*
-	void Update () {
-		
-        if(life <= 0)
-        {
-            #if UNITY_EDITOR
-                        UnityEditor.EditorApplication.isPlaying = false;
-            #else
-                    Application.Quit ();
-            #endif
-        }
-    }
-	*/
 
     public void takeDamage(int life, Vector2 force, int magnitude)
     {

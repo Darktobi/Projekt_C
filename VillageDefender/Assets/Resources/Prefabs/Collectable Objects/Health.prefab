@@ -79,6 +79,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac824e7a4f543245bd23251ac0e11c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioController: {fileID: 0}
+  collectSound: {fileID: 8300000, guid: 0ae4a9388093b4747af317e37d7d84ed, type: 3}
 --- !u!114 &114349418374761654
 MonoBehaviour:
   m_ObjectHideFlags: 1

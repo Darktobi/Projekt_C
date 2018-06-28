@@ -5,20 +5,21 @@ using UnityEngine;
 public class CollectItemController : MonoBehaviour {
 
 
-	//  1   Item item2;
+    public AudioSource audioController;
+
+    public AudioClip collectSound;
+
+
+    private void Start()
+    {
+        audioController = GameObject.Find("AudioController").GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "Player")
         {
 
-
-			// 2  item2 = GetComponent<Item> ();
-
-			//  3  Debug.Log (item2.getItemName ());
-
-
-			//    Debug.Log (GetComponent<Item> ().getItemName ());
 			if (GetComponent<Item> ().getItemName () == "Holz")
 			{
 
@@ -38,25 +39,20 @@ public class CollectItemController : MonoBehaviour {
             if (GetComponent<Item> ().getItemName () == "Schwert") 
 			{
 				GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ().addSword ();
-
-
-
 				Destroy (gameObject);
 
 			}
-	// Lebensenergie zu gewinn
+
+
+	        // Lebensenergie zu gewinn
 			if (GetComponent<Item> ().getItemName () == "Health") 
 			{
 				GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ().addLife();
-
-
-
 				Destroy (gameObject);
 
 			}
 
-
-
+            audioController.PlayOneShot(collectSound);
         }
     }
 
