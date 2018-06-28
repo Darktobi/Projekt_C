@@ -8,6 +8,7 @@ public class BossTrigger : MonoBehaviour {
 	public GameObject bariere;
 	public GameObject displayGameOver;
     public AudioSource backgroundMusic;
+    public AudioClip bossMusic;
 
     void OnTriggerEnter2D(Collider2D other)
 	{
@@ -19,7 +20,10 @@ public class BossTrigger : MonoBehaviour {
 				endgegner.SetActive (true);
 
 				bariere.SetActive (true);
-                backgroundMusic.mute = true;
+                backgroundMusic.Stop();
+
+                backgroundMusic.clip = bossMusic;
+                backgroundMusic.Play();
             }
 		} 
 	}
@@ -30,6 +34,9 @@ public class BossTrigger : MonoBehaviour {
         {
             Debug.Log("Gewonnen");
             displayGameOver.SetActive(true);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().endGame(true);
+
+
         }
     }
 

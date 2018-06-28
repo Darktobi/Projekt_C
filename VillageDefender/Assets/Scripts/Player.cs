@@ -10,6 +10,8 @@ public class Player : MonoBehaviour {
 	private int collectedSword = 0;
     private int collectedJewel = 0;
 
+    private bool hasEndGame;
+
     private Inventory inventory;
 
     public Weapon equippedWeapon;
@@ -17,10 +19,12 @@ public class Player : MonoBehaviour {
 	public AudioSource audioController;
 
 	public AudioClip takeDamageSound;
+    public AudioClip gameOver;
+    public AudioClip win;
 
 	// Use this for initialization
 	void Start () {
-
+        hasEndGame = false;
         inventory = GetComponent<Inventory>();
 	}
 
@@ -32,6 +36,29 @@ public class Player : MonoBehaviour {
 		audioController = GameObject.Find ("AudioController").GetComponent<AudioSource>();
 
 	}
+
+    public void endGame(bool hasWon)
+    {
+
+        if (!hasEndGame)
+        {
+            audioController.Stop();
+
+            if (hasWon)
+            {
+                audioController.volume = 0.6f;
+                audioController.PlayOneShot(win);
+            }
+            else
+            {
+                audioController.PlayOneShot(gameOver);
+            }
+
+            hasEndGame = true;
+
+        }
+
+    }
 
 
     public void takeDamage(int life, Vector2 force, int magnitude)

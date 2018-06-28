@@ -30,6 +30,7 @@ public class UIHandler : MonoBehaviour {
 			//Debug.Log ("Game Over");
 			Time.timeScale = 0;
 			displayGameOverDead.SetActive (true);
+            player.endGame(false);
 		}
 //        collectedWood.text = player.getCollectedWood().ToString();
 	}
