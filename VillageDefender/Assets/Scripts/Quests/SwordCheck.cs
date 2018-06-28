@@ -8,27 +8,26 @@ public class SwordCheck : MonoBehaviour {
 	public GameObject sword;
     public GameObject entry;
     public GameObject jewel;
-	private Player player;
+    private int jewelCount = 0;
+    private Player player;
 
 	// Use this for initialization
 	void Start () {
 
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        jewelCount = FindObjectOfType<Player>().getCollectedJewel();
 
 
-		if (player.GetComponent<Player> ().questfortschritt > 0)
+        if (player.GetComponent<Player> ().questfortschritt > 0)
 		{
 			sword.SetActive (false);
             jewel.SetActive(false);
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-        if(player.GetComponent<Player>().getCollectedSword() > 0)
+
+        else if(jewelCount > 0)
         {
-            entry.SetActive(true);
+            jewel.SetActive(false);
         }
 	}
+	
 }
