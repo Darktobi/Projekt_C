@@ -7,8 +7,9 @@ public class BossTrigger : MonoBehaviour {
 	public GameObject endgegner;
 	public GameObject bariere;
 	public GameObject displayGameOver;
+    public AudioSource backgroundMusic;
 
-	void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
 	{
 
 
@@ -18,18 +19,19 @@ public class BossTrigger : MonoBehaviour {
 				endgegner.SetActive (true);
 
 				bariere.SetActive (true);
-			}
+                backgroundMusic.mute = true;
+            }
 		} 
-
-		if(endgegner == null) 
-		{
-			Debug.Log ("GEwonnen");
-			displayGameOver.SetActive (true);
-
-		}
-
-
 	}
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(endgegner == null)
+        {
+            Debug.Log("Gewonnen");
+            displayGameOver.SetActive(true);
+        }
+    }
 
 
 

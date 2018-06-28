@@ -5,6 +5,7 @@ using UnityEngine;
 public class Endkampf : MonoBehaviour {
 
 	Player player;
+    
 
 	// per Hand verknüpfung in unity, da inaktiv sonst nicht gefunden wird
 	public GameObject npcEndkampf;
@@ -20,8 +21,6 @@ public class Endkampf : MonoBehaviour {
 	void Update () {
 		if (1 == player.getQuest()) {
 			npcEndkampf.SetActive (true);
-
-
 		}
 	}
 }
