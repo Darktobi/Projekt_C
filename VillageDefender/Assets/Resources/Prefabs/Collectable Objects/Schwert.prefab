@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioController: {fileID: 0}
-  collectSound: {fileID: 8300000, guid: 777ddd027ce817840b8da3f43e29baa5, type: 3}
+  collectSound: {fileID: 8300000, guid: b86da1508343a544090fd6be3413a8ee, type: 3}
 --- !u!114 &114645611372666884
 MonoBehaviour:
   m_ObjectHideFlags: 1
