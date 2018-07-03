@@ -12,20 +12,26 @@ public class BossTrigger : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
 	{
+        if (!endgegner.activeInHierarchy)
+        {
+            if (other.tag == "Player")
+            {
 
+                if (endgegner != null)
+                {
+                    endgegner.SetActive(true);
 
-		if (other.tag == "Player") {
+                    bariere.SetActive(true);
+                    backgroundMusic.Stop();
 
-			if (endgegner != null) {
-				endgegner.SetActive (true);
-
-				bariere.SetActive (true);
-                backgroundMusic.Stop();
-
-                backgroundMusic.clip = bossMusic;
-                backgroundMusic.Play();
+                    backgroundMusic.clip = bossMusic;
+                    backgroundMusic.Play();
+                }
             }
-		} 
+
+        }
+
+
 	}
 
     private void OnTriggerStay2D(Collider2D collision)
