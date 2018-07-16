@@ -20,7 +20,10 @@ public class PauseMenu : MonoBehaviour {
 			canvasPause.gameObject.SetActive(true);
         }
 	}
+	public void StartGame(){
 	
+		SceneManager.LoadScene("Dorf2");
+	}	
 	public void Pause()
     {	
 		Cursor.lockState = CursorLockMode.None; 
