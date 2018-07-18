@@ -27,7 +27,6 @@ public class UIHandler : MonoBehaviour {
 
 
 		if (player.getCurrentLife () <= 0) {
-			//Debug.Log ("Game Over");
 			Time.timeScale = 0;
 			displayGameOverDead.SetActive (true);
             player.endGame(false);

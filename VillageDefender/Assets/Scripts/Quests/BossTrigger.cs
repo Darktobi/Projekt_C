@@ -38,10 +38,8 @@ public class BossTrigger : MonoBehaviour {
     {
         if(endgegner == null)
         {
-            Debug.Log("Gewonnen");
             displayGameOver.SetActive(true);
             GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().endGame(true);
-
 
         }
     }

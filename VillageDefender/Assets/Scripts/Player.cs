@@ -37,6 +37,16 @@ public class Player : MonoBehaviour {
 
 	}
 
+    public void Reset()
+    {
+        questfortschritt = 0;
+        life = 100;
+        collectedWood = 0;
+        collectedSword = 0;
+        collectedJewel = 0;
+        hasEndGame = false;
+    }
+
     public void endGame(bool hasWon)
     {
 
